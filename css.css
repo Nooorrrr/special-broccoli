@@ -42,9 +42,9 @@ header {
 }
 
 .gauche {
-    flex: 1 1 5%; /* Ajustez cette valeur selon vos besoins */
     background-color: #FBBC4D;
     padding: 20px;
+    width: 10%;
     box-sizing: border-box;
     position: relative; /* Ajout de la position relative */
 }
