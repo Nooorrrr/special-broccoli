@@ -20,13 +20,13 @@ $result_chef = $conn->query($sql_chef);
 // Check if the user exists in any of the tables
 if ($result_responsable->num_rows > 0) {
     $_SESSION['role'] = 'responsable';
-    header('Location: home_respTGM.html');
+    header('Location: home_respTGM.php');
 } elseif ($result_gestionnaire->num_rows > 0) {
     $_SESSION['role'] = 'gestionnaire';
-    header('Location: home_respTGM.htm');
+    header('Location: home_gest.html');
 } elseif ($result_chef->num_rows > 0) {
     $_SESSION['role'] = 'chef';
-    header('Location: home_respTGM.htm');
+    header('Location: home_chef.html');
 } else {
     echo "Invalid username or password";
 }

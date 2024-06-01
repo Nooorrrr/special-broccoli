@@ -65,6 +65,7 @@
                 <button class="ajouter"><a href="form.html">+ Ajouter</a></button>
             </div>
             <table class="table">
+                <thead>
                 <tr>
                     
                     <th>Date</th>
@@ -81,63 +82,10 @@
                     <th>Cout de reparation</th>
                     <th>Actions</th>
                 </tr>
-                <tr>
-                    <td>01-01-2024</td>
-                    <td>43</td>
-                    <td>08.75.003</td>
-                    <td>c.citerne 6*4</td>
-                    <td>UMN</td>
-                    <td>UMN</td>
-                    <td><a>view</a></td>
-                    <td><a>view</a></td>
-                    <td><a>view</a></td>
-                    <td><a>view</a></td>
-                    <td><a>view</a></td>
-                    <td>
-                        <img src="imgg/mdi--trash.svg" alt="trash" class="trash-icon"> 
-                        <img src="imgg/mdi--printer.svg" alt="printer" class="print-icon"> 
-                        <img src="imgg/mdi--eye.svg" alt="eye">
-                        <img src="imgg/mdi--pencil.svg" alt="pencil"> 
-                    </td>
-                </tr>
-                <tr>
-                    <td>01-01-2024</td>
-                    <td>43</td>
-                    <td>08.75.003</td>
-                    <td>c.citerne 6*4</td>
-                    <td>UMN</td>
-                    <td>UMN</td>
-                    <td><a>view</a></td>
-                    <td><a>view</a></td>
-                    <td><a>view</a></td>
-                    <td><a>view</a></td>
-                    <td><a>view</a></td>
-                    <td>
-                        <img src="imgg/mdi--trash.svg" alt="trash" class="trash-icon"> 
-                        <img src="imgg/mdi--printer.svg" alt="printer" class="print-icon"> 
-                        <img src="imgg/mdi--eye.svg" alt="eye">
-                        <img src="imgg/mdi--pencil.svg" alt="pencil"> 
-                    </td>
-                </tr>
-                <tr>
-                    <td>01-01-2024</td>
-                    <td>43</td>
-                    <td>08.75.003</td>
-                    <td>c.citerne 6*4</td>
-                    <td>UMN</td>
-                    <td>UMN</td>
-                    <td><a>view</a></td>
-                    <td><a>view</a></td>
-                    <td><a>view</a></td>
-                    <td><a>view</a></td>
-                    <td><a>view</a></td>
-                    <td>
-                        <img src="imgg/mdi--trash.svg" alt="trash" class="trash-icon"> 
-                        <img src="imgg/mdi--printer.svg" alt="printer" class="print-icon"> 
-                        <img src="imgg/mdi--eye.svg" alt="eye">
-                        <img src="imgg/mdi--pencil.svg" alt="pencil"> 
-                    </td>
-                </tr>
+                </thead>
+                <tbody>
+                    <?php include 'DT.php'; ?>
+                </tbody>
                
             </table>
         </div>
