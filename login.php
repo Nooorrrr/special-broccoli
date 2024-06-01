@@ -28,7 +28,10 @@ if ($result_responsable->num_rows > 0) {
     $_SESSION['role'] = 'chef';
     header('Location: home_chef.html');
 } else {
-    echo "Invalid username or password";
+    echo "<script>
+            window.location.href='index.php';
+            alert('Invalid username or password');
+          </script>";
 }
 
 $conn->close();
