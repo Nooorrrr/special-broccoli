@@ -1,0 +1,67 @@
+ body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-image: url("bg_auth.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.login-container{
+    width: 400px;
+    height: 270px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border: 1px solid #ffffffd2;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #ffffffa9, #ffffff5c);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.login-title{
+    position: absolute; 
+    top: -20px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    font-family:  Roboto, sans-serif;
+    font-size:30pt;
+    font-weight:bolder; 
+}
+
+input{
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Border style */
+     padding: 10px; /* Padding inside the input */
+    border-radius: 10px; /* Rounded corners */
+    width: 200px; /* Width of the input */
+        }
+
+.login-form{
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button{
+    background-color: #F15E2A;
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding:5px;
+    width:100px;
+    border: 1px solid #F15E2A;
+    border-radius: 10px;
+    color: white;
+    font-size: 13pt;
+}
+.button:hover {
+   cursor: pointer;
+}

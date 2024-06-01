@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:#f0f0f0 ;
+    color: white;
+    padding: 10px 20px 0px 0px;
+    text-align: left;
+    pad
+}
+
+.logo {
+    height: 40px;
+}
+
+.conteneur {
+    display: flex;
+    margin: 0px 0px 0px 0px ;
+}
+
+.gauche {
+    flex: 1 1 30%; /* Prend 30% de la largeur de la page */
+    background-color: rgba(199, 123, 8, 0.822);
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.gauche h2 {
+    margin-top: 0;
+    color: #333; /* Couleur du titre */
+}
+.cadre {
+    border: 2px solid #cccccc;
+    padding: 20px; /* Ajoutez le rembourrage à l'intérieur du cadre */
+    background-color: #1f1c1c;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 0px;
+    width:500px /* Étend le cadre sur toute la largeur du parent (.gauche) */
+}
+.droite {
+    flex: 1 1 70%; /* Prend 70% de la largeur de la page */
+    background-color: #f0f0f0;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.header-droite {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-droite h2 {
+    margin: 0;
+    margin-right: auto; /* Pousse les autres éléments à droite */
+}
+.header-droite .recherche {
+    margin-right: 10px; /* Espace entre la barre de recherche et le bouton Ajouter */
+    padding: 5px 5px 5px 30px; /* Ajout d'espace à droite du texte */
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    background-image: url('imgg/magnifying-glass-solid.svg');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+.header-droite .ajouter {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.header-droite .ajouter {
+    padding: 5px 10px;
+    background-color: #FF4500; /* Couleur orange foncé */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Coins arrondis */
+    cursor: pointer;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+ td {
+
+    padding:10px;
+    text-align: left;
+}
+th{
+
+    padding: 4px;
+    background-color: rgb(146, 140, 140);
+}
+th:nth-child(2), td:nth-child(2) {
+    width: 100px; /* Largeur de la première colonne */
+}
+th:nth-child(8), td:nth-child(8) {
+    width: 100px; 
+}
+th:nth-child(3), td:nth-child(3) {
+    width: 100px; 
+}
+th, td {
+    border: none; /* Supprime les bordures */
+    text-align: center;
+}
+.trai{
+    margin: 0px 0px 0px 0px;
+}
+.text{
+color: aliceblue;
+}

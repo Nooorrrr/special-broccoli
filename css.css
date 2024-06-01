@@ -1,0 +1,150 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: roboto, sans-serif;
+}
+
+header {
+    background-color: #f0f0f0;
+    color: white;
+    padding: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 45px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 70px;
+    border-radius: 25px;
+    margin-left: 10px;
+    background: #000;
+    font-weight: bold;
+}
+
+.conteneur {
+    display: flex;
+    width: 100%;
+    height:100vh; /* Ajuste la hauteur du conteneur pour remplir la page */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gauche {
+    flex: 1 1 5%; /* Ajustez cette valeur selon vos besoins */
+    background-color: #FBBC4D;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Ajout de la position relative */
+}
+.gauche h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.cadre {
+    border: 2px solid #070505;
+    padding: 10px;
+    background-color: #070505;
+    margin-top: 0px;
+    box-sizing: border-box;
+    position: absolute; /* Positionnement absolu par rapport à gauche */
+    left: 0; /* Alignement à gauche */
+    right: 0; /* Alignement à droite */
+    text-align: center;
+}
+
+.droite {
+    flex: 1 1 70%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.header-droite {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-droite h2 {
+    margin: 0;
+    margin-right: auto;
+    font-size: 24px; /* Taille de police plus grande */
+    font-weight: bold; /* Texte en gras */
+}
+
+.header-droite .recherche {
+    margin-right: 20px;
+    padding: 5px 30px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    background-image: url('imgg/magnifying-glass-solid.svg');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width:150px ;
+    height: 30px;
+}
+
+.header-droite .ajouter {
+    width: 100px;
+    height: 40px;
+    padding: 5px 10px;
+    background-color: #F15E2A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #CCCCCC;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+    border: none;
+}
+
+th {
+    padding: 15px;
+    background-color: #CCCCCC;
+}
+tr{
+    border:1px solid #CCCCCC
+}
+th:nth-child(6), td:nth-child(6) {
+    width: 80px;
+}
+
+.trai {
+    margin: 0;
+}
+
+.text {
+    color: aliceblue;
+}
+.table{
+    margin-top: 50px;
+}
