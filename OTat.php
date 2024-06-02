@@ -4,19 +4,23 @@ include 'config.php';
 if (isset($_GET['dt_id'])) {
     $dt_id = intval($_GET['dt_id']);
 
-    $sql = "SELECT ot.ot_date, ot.ot_num, ot.ot_atelier, ot.ot_code_inter,
+    $sql = "SELECT DISTINCT ot.ot_date, ot.ot_num, ot.ot_atelier, ot.ot_code_inter,
     dt.dt_code, dt.dt_design
 FROM ordre_travail ot 
 INNER JOIN demande_travail dt ON ot.dt_id = dt.dt_id
-WHERE ot.dt_id = ?";
+INNER JOIN chef_atelier c ON ot.ot_atelier = c.chef_at
+WHERE ot.dt_id = ? AND c.chef_at = ?";
+
+    
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $dt_id);
+    $stmt->bind_param("is", $dt_id, $_SESSION['atelier']); // Assuming $_SESSION['atelier'] holds the chef's atelier
     $stmt->execute();
     $result = $stmt->get_result();
 } else {
     echo "Invalid request. No demande de travail ID provided.";
     exit();
 }
+
 
 // Check if there are any rows in the result
 if ($result->num_rows > 0) {

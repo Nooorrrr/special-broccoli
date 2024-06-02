@@ -28,8 +28,10 @@ if ($result->num_rows > 0) {
                 <td>{$row['dt_design']}</td>
                 <td>{$row['ot_atelier']}</td>
                 <td><a>view</a></td>
+                <td><img src='imgg/mdi--trash.svg' alt='trash' class='trash-icon'> 
                 <td><img src='imgg/mdi--printer.svg' alt='printer' class='print-icon'>
-                <img src='imgg/mdi--eye.svg' alt='eye'><td>
+                <img src='imgg/mdi--eye.svg' alt='eye'>
+                <img src='imgg/mdi--pencil.svg' alt='pencil'> <td>
               </tr>";
     }
 } 

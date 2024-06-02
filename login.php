@@ -48,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['role'] = 'chef';
         $_SESSION['username'] = $row['util_nom'];
         $_SESSION['structure'] = $row['chef_struct'];
+        $_SESSION['atelier'] = $row['chef_at'];
         header('Location: home_chef.php');
     } else {
         echo "<script>
