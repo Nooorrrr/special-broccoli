@@ -3,7 +3,7 @@ session_start();
 include 'config.php';
 
 // Query to fetch data from the database
-$sql = "SELECT dt.dt_date, dt.dt_num, dt.dt_code, dt.dt_design, p.prov_nom, dt.dt_aff
+$sql = "SELECT dt.dt_date, dt.dt_num, dt.dt_code, dt.dt_design, p.prov_nom, dt.dt_aff, dt.dt_id
 FROM demande_travail dt
 INNER JOIN provenance p ON dt.prov_id = p.prov_id";
 
@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["dt_design"] . "</td>";
         echo "<td>" . $row["prov_nom"] . "</td>";
         echo "<td>" . $row["dt_aff"] . "</td>";
-        echo "<td><a>view</a></td>";
+        echo '<td><a href="ot_respTGM.php?dt_id=' . $row["dt_id"] . '&dt_num=' . $row["dt_num"] . '">View</a></td>';
         echo "<td><a>view</a></td>";
         echo "<td><a>view</a></td>";
         echo "<td><a>view</a></td>";

@@ -53,8 +53,17 @@ include 'config.php';
 <body>
     <header>
         <img src="imgg/images.png" alt="Logo" class="logo">
-        <<div class="profile"><?php echo htmlspecialchars($_SESSION['username']); ?></div>
+        <div class="profile"><?php echo htmlspecialchars($_SESSION['username']); ?></div>
     </header>
+    <?php
+    if (isset($_GET['dt_id']) && isset($_GET['dt_num'])) {
+    $dt_id = $_GET['dt_id'];
+    $numDT = $_GET['dt_num'];
+    $_SESSION['numDT'] = $numDT; // Set numDT in session
+} else {
+    echo "Invalid request.";
+    exit();
+} ?>
     <hr class="trai">
     <div class="conteneur">
         <div class="gauche">
@@ -65,31 +74,25 @@ include 'config.php';
         </div>
         <div class="droite">
             <div class="header-droite">
-                <h2 class="title"><strong>Demande De Travail</strong></h2>
+                <h2 class="title"><strong>Ordres de travail</strong></h2>
+                <h3 class="title"><strong>Num DT: <?php echo $_SESSION['numDT']; ?></strong></h3>
                 <input type="text" placeholder="Rechercher..." class="recherche">
-                <button class="ajouter"><a href="form.html">+ Ajouter</a></button>
             </div>
             <table class="table">
                 <thead>
                 <tr>
                     
                     <th>Date</th>
-                    <th>num DT</th>
+                    <th>Num OT</th>
                     <th>Code</th>
                     <th>Designation</th>
-                    <th>Provenance</th>
-                    <th>Affectation</th>
-                    <th>Ordre de travail</th>
-                    <th>Liste des
-                         consommations</th>
-                    <th>Sous traitance externe</th>
-                    <th>Sous traitance interne</th>
-                    <th>Cout de reparation</th>
+                    <th>Atelier</th>
+                    <th>les travaux effectués</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
-                    <?php include 'DT.php'; ?>
+                    <?php include 'OT.php'; ?>
                 </tbody>
                
             </table>

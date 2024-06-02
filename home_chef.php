@@ -1,3 +1,8 @@
+<?php
+session_start();
+include 'config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -48,7 +53,7 @@
 <body>
     <header>
         <img src="imgg/images.png" alt="Logo" class="logo">
-        <div class="profile">user</div>
+        <div class="profile"><?php echo htmlspecialchars($_SESSION['username']); ?></div>
     </header>
     <hr class="trai">
     <div class="conteneur">
