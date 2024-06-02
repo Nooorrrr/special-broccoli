@@ -25,7 +25,8 @@ header {
     justify-content: center;
     align-items: center;
     height: 30px;
-    width: 70px;
+    width: 100px;
+    padding: 0 5px;
     border-radius: 25px;
     margin-left: 10px;
     background: #000;

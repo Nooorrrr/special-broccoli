@@ -67,7 +67,7 @@ include 'config.php';
             <div class="header-droite">
                 <h2 class="title"><strong>Demande De Travail</strong></h2>
                 <input type="text" placeholder="Rechercher..." class="recherche">
-                <button class="ajouter"><a href="form.html">+ Ajouter</a></button>
+                <button class="ajouter"><a href="form.php">+ Ajouter</a></button>
             </div>
             <table class="table">
                 <thead>

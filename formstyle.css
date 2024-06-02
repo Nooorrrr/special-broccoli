@@ -26,13 +26,13 @@ header {
     justify-content: center;
     align-items: center;
     height: 30px;
-    width: 70px;
+    width: 100px;
+    padding: 0 5px;
     border-radius: 25px;
     margin-left: 10px;
     background: #000;
     font-weight: bold;
 }
-
 
 .conteneur {
     display: flex;
@@ -46,6 +46,7 @@ header {
 .gauche {
     flex: 1 1 5%; /* Ajustez cette valeur selon vos besoins */
     background-color: #FBBC4D;
+    width: 10%;
     padding: 20px;
     box-sizing: border-box;
     position: relative; /* Ajout de la position relative */
@@ -132,4 +133,9 @@ input[type="text"], input[type="date"]{
 label{
     font-weight: bold;
     margin-top: 1rem;
+}
+
+.desc-and-button{
+    display: flex;
+    flex-direction: column;
 }

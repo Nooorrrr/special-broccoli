@@ -1,3 +1,8 @@
+<?php
+session_start();
+include 'config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,7 +13,7 @@
 <body>
     <header>
         <img src="imgg/images.png" alt="Logo" class="logo">
-        <div class="profile">user</div>
+        <div class="profile"><?php echo htmlspecialchars($_SESSION['username']); ?></div>
     </header>
     <hr class="trai">
     <div class="conteneur">
@@ -24,7 +29,7 @@
             </div>
             <div class="form">
                 <form action="/submit" method="post">
-                    <div class="formcontent">
+                <div class="formcontent">
                     <div class="leftform">
                     <label for="numeroDT">N°:</label>
                     <input type="text" id="numeroDT" name="numeroDT" required>
@@ -36,7 +41,7 @@
                     <input type="text" id="affectation" name="affection" required>
                     <label for="atm">ATM:</label>
                     <input type="text" id="atm" name="atm" required>
-                </div>
+                    </div>
 
                     <div class="middleform">
                     <label for="date">Date:</label>
@@ -66,9 +71,14 @@
                     <input type="text" id="code" name="code" required>
                     <label for="du">du:</label>
                     <input type="date" id="du" name="du" required>
-                 </div>
+                    </div>
+                 
                 </div>
-                <button type="submit">Submit</button> 
+                <div class="desc-and-button" style="display:flex; flex-direction:column;">
+                <label for="Description" style="margin-bottom:10px;">Description:</label>
+                <input type="text" id="Description" name="Description" style="width: 80%; height:150px; ">
+                <button type="submit" style="background-color:#F15E2A; border:none; border-radius:10px; color :white; width:5rem; height: 2rem; margin:10px; position:absolute; left: 70%; ">Valider</button> 
+                </div>
                 </form>
             </div>
         </div>
