@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
         echo "<td>" . htmlspecialchars($row["prov_nom"]) . "</td>";
         echo "<td>" . htmlspecialchars($row["dt_aff"]) . "</td>";
         echo '<td><a href="ot_gest.php?dt_id=' . urlencode($row["dt_id"]) . '&dt_num=' . urlencode($row["dt_num"]) . '">View</a></td>';
-        echo "<td><a>view</a></td>";
+        echo '<td><a href="lc_gest.php?dt_id=' . urlencode($row["dt_id"]) . '&dt_num=' . urlencode($row["dt_num"]) . '">View</a></td>';
         echo "<td><a>view</a></td>";
         echo "<td><a>view</a></td>";
         echo "<td><a>view</a></td>";

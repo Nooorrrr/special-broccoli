@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["prov_nom"] . "</td>";
         echo "<td>" . $row["dt_aff"] . "</td>";
         echo '<td><a href="ot_respTGM.php?dt_id=' . $row["dt_id"] . '&dt_num=' . $row["dt_num"] . '">View</a></td>';
-        echo "<td><a>view</a></td>";
+        echo '<td><a href="lc_respTGM.php?dt_id=' . $row["dt_id"] . '&dt_num=' . $row["dt_num"] . '">View</a></td>';
         echo "<td><a>view</a></td>";
         echo "<td><a>view</a></td>";
         echo "<td><a>view</a></td>";
