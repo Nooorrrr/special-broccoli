@@ -38,8 +38,8 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["dt_aff"] . "</td>";
         echo '<td><a href="ot_chef.php?dt_id=' . urlencode($row["dt_id"]) . '&dt_num=' . urlencode($row["dt_num"]) . '">View</a></td>';
         echo '<td><a href="lc_respTGM.php?dt_id=' . urlencode($row["dt_id"]) . '&dt_num=' . urlencode($row["dt_num"]) . '">View</a></td>';
-        echo "<td><a>view</a></td>";
-        echo "<td><a>view</a></td>";
+        echo '<td><a href="ste_respTGM.php?dt_id=' . urlencode($row["dt_id"]) . '&dt_num=' . urlencode($row["dt_num"]) . '">View</a></td>';
+        echo '<td><a href="sti_respTGM.php?dt_id=' . urlencode($row["dt_id"]) . '&dt_num=' . urlencode($row["dt_num"]) . '">View</a></td>';
         echo "<td><a>view</a></td>";
         echo '<td>
             <img src="imgg/mdi--printer.svg" alt="printer" class="print-icon"> 
