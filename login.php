@@ -10,6 +10,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Debugging: Print the credentials
     echo "Credentials: Username: $username, Password: $password<br>";
 
+    // Check in admin table 
+    $sql_admin = "SELECT * FROM admin WHERE util_nom = ? AND util_pwd = ?";
+    $stmt_admin = $conn->prepare($sql_admin);
+    $stmt_admin->bind_param("ss", $username, $password);
+    $stmt_admin->execute();
+    $result_admin = $stmt_admin->get_result();
+
     // Check in responsable_TGM table
     $sql_responsable = "SELECT * FROM responsable_TGM WHERE util_nom = ? AND util_mdp = ?";
     $stmt_responsable = $conn->prepare($sql_responsable);
@@ -50,6 +57,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['structure'] = $row['chef_struct'];
         $_SESSION['atelier'] = $row['chef_at'];
         header('Location: home_chef.php');
+    } elseif ($result_admin->num_rows > 0) {
+        $row = $result_admin->fetch_assoc();
+        $_SESSION['role'] = 'admin';
+        $_SESSION['username'] = $row['util_nom'];
+        header('Location: home_admin.php');
     } else {
         echo "<script>
                 window.location.href='index.php';
