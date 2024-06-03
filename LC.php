@@ -4,7 +4,7 @@ include 'config.php';
 if (isset($_GET['dt_id'])) {
     $dt_id = intval($_GET['dt_id']);
 
-    $sql = "SELECT lc.lc_date, lc.lc_num,
+    $sql = "SELECT lc.lc_date, lc.lc_num,lc_id,
     dt.dt_code, dt.dt_design
 FROM liste_consommations lc 
 INNER JOIN demande_travail dt ON lc.dt_id = dt.dt_id
@@ -25,9 +25,9 @@ if ($result->num_rows > 0) {
                 <td>{$row['lc_date']}</td>
                 <td>{$row['lc_num']}</td>
                 <td>{$row['dt_code']}</td>
-                <td>{$row['dt_design']}</td>
-                <td><a>view</a></td>
-                <td><img src='imgg/mdi--printer.svg' alt='printer' class='print-icon'>
+                <td>{$row['dt_design']}</td>";
+                echo '<td><a href="c_respTGM.php?lc_id=' . urlencode($row["lc_id"]) . '&lc_num=' . urlencode($row["lc_num"]) . '">View</a></td>';
+                echo "<td><img src='imgg/mdi--printer.svg' alt='printer' class='print-icon'>
                 <img src='imgg/mdi--eye.svg' alt='eye'><td>
               </tr>";
     }

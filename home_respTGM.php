@@ -10,45 +10,7 @@ include 'config.php';
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script>
-        // Function to delete a row
-        function deleteRow(btn) {
-            var row = btn.closest('tr');
-            row.parentNode.removeChild(row);
-        }
 
-        // Function to print a row's content as PDF
-        async function printRow(btn) {
-            var row = btn.closest('tr');
-            var cells = row.getElementsByTagName('td');
-            var doc = new jspdf.jsPDF();
-
-            let content = '';
-            for (var i = 0; i < cells.length - 1; i++) { // -1 to exclude the last cell containing icons
-                content += cells[i].innerText + ' ';
-            }
-
-            doc.text(content, 10, 10);
-            doc.save('row-content.pdf');
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var trashIcons = document.querySelectorAll('.trash-icon');
-            var printIcons = document.querySelectorAll('.print-icon');
-
-            trashIcons.forEach(function(icon) {
-                icon.addEventListener('click', function() {
-                    deleteRow(this);
-                });
-            });
-
-            printIcons.forEach(function(icon) {
-                icon.addEventListener('click', function() {
-                    printRow(this);
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <header>

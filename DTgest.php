@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
         echo '<td><a href="lc_gest.php?dt_id=' . urlencode($row["dt_id"]) . '&dt_num=' . urlencode($row["dt_num"]) . '">View</a></td>';
         echo '<td><a href="ste_gest.php?dt_id=' . urlencode($row["dt_id"]) . '&dt_num=' . urlencode($row["dt_num"]) . '">View</a></td>';
         echo '<td><a href="sti_gest.php?dt_id=' . urlencode($row["dt_id"]) . '&dt_num=' . urlencode($row["dt_num"]) . '">View</a></td>';
-        echo "<td><a>view</a></td>";
+        echo '<td><a href="fc_gest.php?dt_id=' . urlencode($row["dt_id"]) . '&dt_num=' . urlencode($row["dt_num"]) . '">View</a></td>';
         echo '<td>
             <img src="imgg/mdi--printer.svg" alt="printer" class="print-icon"> 
             <img src="imgg/mdi--eye.svg" alt="eye">
