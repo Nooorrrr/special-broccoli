@@ -63,6 +63,7 @@ include 'header.php';
             <div class="header-droite">
                 <h2 class="title"><strong>Liste des utilisateurs</strong></h2>
                 <input type="text" placeholder="Rechercher..." class="recherche">
+                <button class="ajouter"><a href="form_util.php">+ Ajouter</a></button>
             </div>
             <table class="table">
                 <thead>
@@ -78,7 +79,7 @@ include 'header.php';
                 </tr>
                 </thead>
                 <tbody>
-                  
+                  <!----hna u should add te3 linking m3a database -->
                 </tbody>
                
             </table>
