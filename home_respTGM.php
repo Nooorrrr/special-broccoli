@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'config.php';
+include 'header.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,13 +11,9 @@ include 'config.php';
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-
 </head>
 <body>
-    <header>
-        <img src="imgg/images.png" alt="Logo" class="logo">
-        <<div class="profile"><?php echo htmlspecialchars($_SESSION['username']); ?></div>
-    </header>
+
     <hr class="trai">
     <div class="conteneur">
         <div class="gauche">
@@ -57,5 +54,11 @@ include 'config.php';
             </table>
         </div>
     </div>
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("dropdown");
+            dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'config.php';
+include 'header.php';
 
 // Fetch provenance options from the database
 $sql_provenance = "SELECT prov_id, prov_nom FROM provenance";
@@ -21,10 +22,7 @@ if ($result_provenance->num_rows > 0) {
     <link rel="stylesheet" href="formstyle.css">
 </head>
 <body>
-    <header>
-        <img src="imgg/images.png" alt="Logo" class="logo">
-        <div class="profile"><?php echo htmlspecialchars($_SESSION['username']); ?></div>
-    </header>
+    
     <hr class="trai">
     <div class="conteneur">
         <div class="gauche">

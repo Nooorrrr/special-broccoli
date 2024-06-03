@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'config.php';
+include 'header.php';
 ?>
 
 <!DOCTYPE html>
@@ -51,10 +52,6 @@ include 'config.php';
     </script>
 </head>
 <body>
-    <header>
-        <img src="imgg/images.png" alt="Logo" class="logo">
-        <div class="profile"><?php echo htmlspecialchars($_SESSION['username']); ?></div>
-    </header>
     <?php
     if (isset($_GET['dt_id']) && isset($_GET['dt_num'])) {
     $dt_id = $_GET['dt_id'];
