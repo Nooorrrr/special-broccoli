@@ -46,7 +46,8 @@ if ($result_provenance->num_rows > 0) {
                             <label for="serie">Serie:</label>
                             <input type="text" id="serie" name="serie" required>
                             <label for="affectation">Affectation:</label>
-                            <select id="affectation" name="affectation" required>
+                            <select id="affectation" name="affectation" required style="border-radius: 50px;
+                            border:1px solid #ccc; width: 250px; height: 10px; padding: 10px;">
                                 <option value="UMN">UMN</option>
                                 <option value="UMS">UMS</option>
                                 <option value="URO">URO</option>
@@ -62,7 +63,8 @@ if ($result_provenance->num_rows > 0) {
                             <label for="matricule">Matricule:</label>
                             <input type="text" id="matricule" name="matricule" required>
                             <label for="provenance">Provenance:</label>
-                            <select name="provenance" id="provenance" required>
+                            <select name="provenance" id="provenance" required style="border-radius: 50px;
+                            border:1px solid #ccc; width: 250px; height: 10px; padding: 10px; margin-bottom:10px;" >
                                 <?php foreach ($provenances as $prov): ?>
                                     <option value="<?php echo $prov['prov_id']; ?>"><?php echo $prov['prov_nom']; ?></option>
                                 <?php endforeach; ?>

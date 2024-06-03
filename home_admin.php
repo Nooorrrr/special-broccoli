@@ -17,13 +17,11 @@ include 'header.php';
             var row = btn.closest('tr');
             row.parentNode.removeChild(row);
         }
-
         // Function to print a row's content as PDF
         async function printRow(btn) {
             var row = btn.closest('tr');
             var cells = row.getElementsByTagName('td');
             var doc = new jspdf.jsPDF();
-
             let content = '';
             for (var i = 0; i < cells.length - 1; i++) { // -1 to exclude the last cell containing icons
                 content += cells[i].innerText + ' ';
@@ -58,38 +56,34 @@ include 'header.php';
         <div class="gauche">
             <h2>GMI</h2>
             <div class="cadre">
-               <p class="text">Tableau de bord</p>
+               <p class="text">Utilisateur</p>
             </div>
         </div>
         <div class="droite">
             <div class="header-droite">
-                <h2 class="title"><strong>Demande De Travail</strong></h2>
+                <h2 class="title"><strong>Liste des utilisateurs</strong></h2>
                 <input type="text" placeholder="Rechercher..." class="recherche">
             </div>
             <table class="table">
                 <thead>
                 <tr>
-                    
-                    <th>Date</th>
-                    <th>num DT</th>
-                    <th>Code</th>
-                    <th>Designation</th>
-                    <th>Provenance</th>
-                    <th>Affectation</th>
-                    <th>Ordre de travail</th>
-                    <th>Liste des
-                         consommations</th>
-                    <th>Sous traitance externe</th>
-                    <th>Sous traitance interne</th>
-                    <th>Cout de reparation</th>
-                    <th>Actions</th>
+                   <th>Id</th>
+                   <th>Role</th>
+                   <th>Structure</th>
+                   <th>Atelier</th>
+                   <th>Nom Utilisateur</th>
+                   <th>Mot de passe</th>
+                     
+
                 </tr>
                 </thead>
                 <tbody>
-                    <?php include 'DTat.php'; ?>
+                  
                 </tbody>
                
             </table>
+           
+
         </div>
     </div>
 </body>
